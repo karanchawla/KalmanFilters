@@ -24,6 +24,7 @@
 /* Cholesky-decomposition matrix-inversion code, adapated from
    http://jean-pierre.moreau.pagesperso-orange.fr/Cplus/choles_cpp.txt */
 
+//decomposition of matrix 
 static int choldc1(double * a, double * p, int n) {
     int i,j,k;
     double sum;
@@ -49,6 +50,7 @@ static int choldc1(double * a, double * p, int n) {
     return 0; /* success */
 }
 
+//Inverse of choelsky decomposition
 static int choldcsl(double * A, double * a, double * p, int n) 
 {
     int i,j,k; double sum;
@@ -70,7 +72,7 @@ static int choldcsl(double * A, double * a, double * p, int n)
     return 0; /* success */
 }
 
-
+//Matrix inverse using CD
 static int cholsl(double * A, double * a, double * p, int n) 
 {
     int i,j,k;
